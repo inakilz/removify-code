@@ -1,10 +1,6 @@
-# browserify-remove-code
+# removify-code
 Remove sections of code from files based on conditions (browserify transform)
 
-Props to:
- - https://github.com/substack/browserify-handbook#writing-your-own
+Browserify transform similar to:
  - https://github.com/crissdev/gulp-remove-code
 
-TODO:
- - docs
- - tests
