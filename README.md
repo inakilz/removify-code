@@ -11,4 +11,4 @@ npm install removify-code
 
 # License
 
-MIT (c) keik
+MIT (c) inakilz
