@@ -1,7 +1,7 @@
 {
   "name": "removify-code",
   "version": "1.0.1",
-  "description": "Remove sections of code from files based on conditions (browserify transform)",
+  "description": "Browserify transform to remove sections of code from files based on conditions",
   "main": "index.js",
   "scripts": {
 	"test": "echo \"Error: no test specified\" && exit 1"
