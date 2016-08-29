@@ -1,6 +1,5 @@
 # removify-code
-Remove sections of code from files based on conditions (browserify transform)
+Remove sections of code from files based on conditions (browserify transform) similar to:
 
-Browserify transform similar to:
  - https://github.com/crissdev/gulp-remove-code
 
