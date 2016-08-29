@@ -8,7 +8,7 @@
   },
   "repository": {
 	"type": "git",
-	"url": "git+https://github.com/Anmo/browserify-remove-code.git"
+	"url": "git+https://github.com/inakilz/removify-code.git"
   },
   "keywords": [
 	"remove",
@@ -21,9 +21,9 @@
   "author": "inakilz",
   "license": "MIT",
   "bugs": {
-	"url": "https://github.com/inakilz/browserify-remove-code/issues"
+	"url": "https://github.com/inakilz/removify-code/issues"
   },
-  "homepage": "https://github.com/inakilz/browserify-remove-code#readme",
+  "homepage": "https://github.com/inakilz/removify-code#readme",
   "dependencies": {
 	"through2": "^2.0.0"
   }
