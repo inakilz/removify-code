@@ -1,6 +1,6 @@
 {
   "name": "removify-code",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Browserify transform to remove sections of code from files based on conditions",
   "main": "index.js",
   "scripts": {
