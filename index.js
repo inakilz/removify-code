@@ -1,3 +1,5 @@
+'use strict';
+
 var through = require('through2');
 var extname = require('path').extname;
 
@@ -15,7 +17,8 @@ function getRemovalTagsRegExp(commentStart, commentEnd, key) {
 		'gi');
 }
 
-module.exports = function(options) {
+module.exports = function(file, options) {
+	
 	options = options || {};
 
 	var conditions = [],
@@ -41,9 +44,9 @@ module.exports = function(options) {
 		}
 	});
 
-	return function (file) {
-		var fileExt = extname(file);
+	return through(function (buf, enc, next) {
 
+		var fileExt = extname(file);
 		var commentStart = '//';
 		var commentEnd = '';
 
@@ -70,25 +73,19 @@ module.exports = function(options) {
 				break;
 		}
 
-		return through(function (buf, enc, next) {
-			var contents = buf.toString('utf8');
-
-			if (contents.length > 0) {
-				for (var i = 0; i < conditions.length; i++) {
-					var key = conditions[i],
-						regex = regexCache[fileExt + key];
-
-					if (!regex) {
-						regex = regexCache[fileExt + key] = getRemovalTagsRegExp(commentStart, commentEnd, key);
-					}
-
-					contents = contents.replace(regex, '');
+		var contents = buf.toString('utf8');
+		if (contents.length > 0) {
+			for (var i = 0; i < conditions.length; i++) {
+				var key = conditions[i],
+				regex = regexCache[file + key];
+				if (!regex) {
+					regex = regexCache[file + key] = getRemovalTagsRegExp(commentStart, commentEnd, key);
 				}
+				contents = contents.replace(regex, '');
 			}
-
-			this.push(contents);
-
-			next();
-		});
-	};
+		}
+		this.push(contents);
+		next();
+	});
+	
 };
