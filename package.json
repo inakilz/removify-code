@@ -1,5 +1,5 @@
 {
-  "name": "browserify-remove-code",
+  "name": "removify-code",
   "version": "1.0.1",
   "description": "Remove sections of code from files based on conditions (browserify transform)",
   "main": "index.js",
@@ -12,19 +12,18 @@
   },
   "keywords": [
 	"remove",
-	"remove",
 	"code",
 	"strip",
 	"code",
 	"browserify",
 	"transform"
   ],
-  "author": "Anmo",
+  "author": "inakilz",
   "license": "MIT",
   "bugs": {
-	"url": "https://github.com/Anmo/browserify-remove-code/issues"
+	"url": "https://github.com/inakilz/browserify-remove-code/issues"
   },
-  "homepage": "https://github.com/Anmo/browserify-remove-code#readme",
+  "homepage": "https://github.com/inakilz/browserify-remove-code#readme",
   "dependencies": {
 	"through2": "^2.0.0"
   }
