@@ -20,6 +20,9 @@ function getRemovalTagsRegExp(commentStart, commentEnd, key) {
 module.exports = function(file, options) {
 	
 	options = options || {};
+	if (Object.keys(options).length <= 1) {
+		options.development = true;
+	}
 
 	var conditions = [],
 		commentEnd = '',
