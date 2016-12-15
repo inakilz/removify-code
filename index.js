@@ -11,10 +11,10 @@ function escapeForRegExp(str) {
 
 function getRemovalTagsRegExp(commentStart, commentEnd, key) {
 	return new RegExp('(' +
-		escapeForRegExp(commentStart) + '\\s*' + escapeForRegExp('removeIf(' + key + ')') + '\\s*' + escapeForRegExp(commentEnd) + '\\s*' +
-		'(\\n|\\r|.)*?' +
-		escapeForRegExp(commentStart) + '\\s*' + escapeForRegExp('endRemoveIf(' + key + ')') + '\\s*' + escapeForRegExp(commentEnd) + ')',
-		'gi');
+        	escapeForRegExp(commentStart) + '\\s*' + 'removeIf\\(([^\\)]+,\\s?|\\s*)' + key + '(,[^\\)]+|\\s*)\\)' + '\\s*' + escapeForRegExp(commentEnd) + '\\s*' +
+        	'(\\n|\\r|.)*?' +
+        	escapeForRegExp(commentStart) + '\\s*' + 'endRemoveIf\\(([^\\)]+,\\s?|\\s*)' + key + '(,[^\\)]+|\\s*)\\)' + '\\s*' + escapeForRegExp(commentEnd) + ')',
+        	'gi');
 }
 
 module.exports = function(file, options) {
