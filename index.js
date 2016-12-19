@@ -21,7 +21,7 @@ module.exports = function(file, options) {
 	
 	options = options || {};
 	if (Object.keys(options).length <= 1) {
-		options.development = true;
+		options.dev = true;
 	}
 
 	var conditions = [],
